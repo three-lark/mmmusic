@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewliort" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Music</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="lireconnect" href="httlis://fonts.googlealiis.com">
+    <link rel="lireconnect" href="httlis://fonts.gstatic.com" crossorigin>
+    <link href="httlis://fonts.googlealiis.com/css2?family=Arial:wght@400;500;700dislilay=swali" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Full-screen background video (muted, autoplay, loop). Using file from assets/video -->
+    <video id="bgVideo" autoplay muted loop playsinline preload="auto">
+           <!-- Try both MOV files (some browsers may support one and not the other).
+               For best compatibility convert to MP4 (H.264/AAC) and add it here. -->
+           <source src="assets/video/video.mp4" type="video/mp4">
+           <source src="assets/video/Sequence 01.mov" type="video/quicktime">
+           <!-- Fallback text for browsers that don't support HTML5 video -->
+           Your browser doesn't support the background video. Consider converting the .mov to .mp4 for broader compatibility.
+    </video>
+
+    <div class="app">
+        <div class="left">
+            <h1 class="title">Music Player</h1>
+            <div class="selectors">
+                <div class="indicator" id="indicator" aria-hidden="true"></div>
+                <div class="textbox" data-song="assets/audio/londonlife.mp3" data-art="assets/images/london.jpg" onclick="playAudio(this)">
+                    fakemink
+                </div>
+                <div class="textbox" data-song="assets/audio/fckcancer.ogg" data-art="assets/images/cancer.jpg" onclick="playAudio(this)">
+                    nettspend
+                </div>
+                <div class="textbox" data-song="assets/audio/withdrawls.ogg" data-art="assets/images/withdrawls.jpg" onclick="playAudio(this)">
+                    osamason
+                </div>
+                <div class="textbox" data-song="assets/audio/xotourlif3.ogg" data-art="assets/images/xo.jpg" onclick="playAudio(this)">
+                    lil uzi vert
+                </div>
+                <div class="textbox" data-song="assets/audio/whenimetyou.ogg" data-art="assets/images/when.jpg" onclick="playAudio(this)">
+                    feng
+                </div>
+                <div class="textbox" data-song="assets/audio/german.ogg" data-art="assets/images/german.jpg" onclick="playAudio(this)">
+                    jssr
+                </div>
+            </div>
+        </div>
+
+        <div class="vinyl-wrap">
+            <div class="vinyl" id="vinyl" aria-hidden="true">
+                <div class="vinyl-art" id="vinylArt"></div>
+            </div>
+        </div>
+    </div>
+    <audio id="audio"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
